@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and Clickable Images</title>
+    <style>
+        body {
+            background-image: url('https://umbphotos.ag/images/463479faecedfca2f138e8a9aaa9d331.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            margin: 0;
+        }
+        .image-container {
+            display: flex;
+            gap: 50px;
+            position: fixed;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/57d9bdac0e16a565249e5e1f6c1dc987.png" alt="Image 1">
+        </a>
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/42ecb453cc803b7599150982ea7f78cc.png" alt="Image 2">
+        </a>
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/e2065bef42da8a39506365bdfac1021b.png" alt="Image 3">
+        </a>
+    </div>
+</body>
+</html>
