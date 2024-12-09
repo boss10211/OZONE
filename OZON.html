@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and Clickable Images</title>
+    <style>
+        body {
+            background-image: url('https://umbphotos.ag/images/19ef4ebe5338baa3ef8210505ba46b34.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .image-container {
+            display: flex;
+            gap: 50px;
+            position: fixed;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            animation: fall-diagonal 5s linear infinite;
+        }
+        @keyframes fall-diagonal {
+            0% {
+                transform: translate(-100vw, -100vh);
+            }
+            100% {
+                transform: translate(100vw, 100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/57d9bdac0e16a565249e5e1f6c1dc987.png" alt="Image 1">
+        </a>
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/42ecb453cc803b7599150982ea7f78cc.png" alt="Image 2">
+        </a>
+        <a href="https://t.me/ozoneHR">
+            <img src="https://umbphotos.ag/images/e2065bef42da8a39506365bdfac1021b.png" alt="Image 3">
+        </a>
+    </div>
+    <script>
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.width = `${Math.random() * 5 + 2}px`;
+            star.style.height = star.style.width;
+            star.style.background = `hsl(${Math.random() * 360}, 100%, 80%)`;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            document.body.appendChild(star);
+            setTimeout(() => {
+                star.remove();
+            }, 5000);
+        }
+        setInterval(createStar, 100);
+    </script>
+</body>
+</html>
